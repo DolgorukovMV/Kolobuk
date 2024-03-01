@@ -1,0 +1,123 @@
+<div class="game-start-title">
+    <a href="main.html"><img src="image\title-kolobuk.png" alt="Kolobuk Logo"></a>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+        <div class="symbol">
+            <svg class="your-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="6" viewBox="0 0 36 6" fill="none">
+            <path d="M33 3.07324L3 3.07324" stroke="#AFAFAF" stroke-width="4.52746" stroke-linecap="round"/>
+            </svg>
+            <svg class="your-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="6" viewBox="0 0 36 6" fill="none">
+            <path d="M33 3.07324L3 3.07324" stroke="#AFAFAF" stroke-width="4.52746" stroke-linecap="round"/>
+            </svg>
+            <svg class="your-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="6" viewBox="0 0 36 6" fill="none">
+            <path d="M33 3.07324L3 3.07324" stroke="#AFAFAF" stroke-width="4.52746" stroke-linecap="round"/>
+            </svg>
+        </div>
+        </label>
+        <ul class="menu__box">
+            <div class="close-arrow" id="closeArrow" onclick="closesArrow()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.5 6.00006L21.5 12.0001L15.5 18.0001" fill="none"/>
+                <path d="M21 12.0001H3" fill="none"/>
+            </svg>
+            
+            </div>
+        <li><a class="menu__item" id="start-game" href="#" onclick="loadAndPlayMusic('game1.txt')"><p>Начать игру</p></a></li>
+        <li><a class="menu__item" id="kolobuk-zelo" href="#" onclick="loadAndPlayMusic('game5.txt')"><p>Колобук зело</p></a></li>
+        <li><a class="menu__item" id="contacts-call" href="#"><p>обратная связь</p></a></li>
+        </ul>
+    </div>
+</div>
+<div class="feedback">
+    <div class="left-feedback">
+        <div class="tittle-feedback">
+            <p>Обратная связь</p>
+        </div>
+        <div class="text-feedback">
+            <p>Если Вам необходимо связаться с управленцами сайта kolobuk.ru либо у Вас появились вопросы или предложения – напишите нам. Мы рассмотрим Ваше обращение и ответим на него в ближайшее время.</p>
+        </div>
+        <div class="img-feed">
+            <img src="image\img-feedback.png" alt="img-feedback">
+        </div>
+    </div>
+    <div class="right-feedback">
+        <form id="contactForm" onsubmit="return validateForm()">
+            <div class="form-group">
+                <input type="text" id="username" name="username" required onfocus="changeLabelStyle('usernameLabel')" oninput="checkInput('username')" onblur="resetLabelStyle('usernameLabel')">
+                <label for="username" id="usernameLabel">Ваше имя</label>
+            </div>
+
+            <div class="form-group">
+                <input type="email" id="email" name="email" required onfocus="changeLabelStyle('emailLabel')" oninput="checkInput('email')" onblur="resetLabelStyle('emailLabel')">
+                <label for="email" id="emailLabel">Ваш email </label>
+            </div>
+                
+            <div class="form-group">
+                <textarea type="message" id="message" name="message" required onfocus="changeLabelStylearea('messegaLabel')" oninput="checkInputarea('message')" onblur="resetLabelStylearea('messageLabel')"></textarea>
+                <label for="message" id="messageLabel">Сообщение (не менее 20 символов)</label>
+            </div>
+            <div class="capt">
+                    <!-- Canvas for captcha -->
+                    <canvas id="captchaCanvas" width="134" height="56"></canvas>
+                    <button onclick="refreshCaptcha()"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <g clip-path="url(#clip0_1185_130)">
+                  <path d="M2.89574 7C4.36574 4.01 7.44574 1.95 11.0057 1.95C16.0057 1.95 20.0557 6 20.0557 11C20.0557 16 16.0057 20.05 11.0057 20.05C7.44574 20.05 4.36574 17.99 2.88574 15" stroke="#BE956F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M1.94531 2.71999V7.40999H6.49531" stroke="#BE956F" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </g>
+                  <defs>
+                  <clipPath id="clip0_1185_130">
+                  <rect width="20.11" height="20.1" fill="white" transform="translate(0.945312 0.949997)"/>
+                  </clipPath>
+                  </defs>
+                  </svg></button>
+                    
+                    <!-- Input field for captcha digits -->
+                    <label for="captchaDigits"></label>
+                    <input type="text" id="captchaDigits" name="captchaDigits" required>
+            </div>
+
+            <div class="check">
+                <input type="checkbox" id="agree" name="agree" required>
+                <div class="text-agree" for="agree"><p>Нажимая кнопку, я принимаю условия <a href="#" onclick="loadContent('user_agreement.txt')">Пользовательского соглашения</a> и даю своё согласие на обработку моих персональных данных, в соответствии с Федеральным законом от 27.07.2006 года №152-ФЗ "О персональных данных”.</p></div>
+            </div>
+            <div class="button-start-sent">
+                <a href="#" onclick="validateForm()">
+                    <div class="button-image-container-sent">
+                        <img  src="image/button-start.png" alt="Start Button">
+                        <span class="button-text-sent">Отправить сообщение</span>
+                    </div>
+                </a>
+            </div>
+        </form>
+    
+        <p id="errorMessage" class="hidden">Убедитесь, что все поля заполнены правильно. Постараться заполнить недостающее поле.</p>
+    
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="footer-link">
+        <a href="#" onclick="loadAndPlayMusic('game1.txt')">
+            <h4>Начать игру</h4>
+        </a>
+        <a href="#" onclick="loadContent('feedback-sent.txt')">
+            <h4>Обратная связь</h4>
+        </a>
+        <a href="#" onclick="loadContent('user_agreement.txt')">
+            <h4>Пользовательское соглашение</h4>
+        </a>
+        <a href="#" onclick="loadContent('privacy_policy.txt')">
+            <h4>Политика конфиденциальности</h4>
+        </a>
+    </div> 
+    <div class="footer-line">
+        <img src="image\line.png" alt="">
+    </div> 
+    <div class="copywriter">
+        <p>
+            © Kolobuk.ru, 2024. Копирование материалов разрешено только с указанием активной ссылки на источник 
+        </p>
+    </div>  
+</div>

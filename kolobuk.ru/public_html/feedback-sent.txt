@@ -1,0 +1,70 @@
+<div class="game-start-title">
+    <a href="main.html"><img src="image\title-kolobuk.png" alt="Kolobuk Logo"></a>
+    <div class="hamburger-menu">
+        <input id="menu__toggle" type="checkbox" />
+        <label class="menu__btn" for="menu__toggle">
+        <div class="symbol">
+            <svg class="your-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="6" viewBox="0 0 36 6" fill="none">
+            <path d="M33 3.07324L3 3.07324" stroke="#AFAFAF" stroke-width="4.52746" stroke-linecap="round"/>
+            </svg>
+            <svg class="your-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="6" viewBox="0 0 36 6" fill="none">
+            <path d="M33 3.07324L3 3.07324" stroke="#AFAFAF" stroke-width="4.52746" stroke-linecap="round"/>
+            </svg>
+            <svg class="your-svg" xmlns="http://www.w3.org/2000/svg" width="36" height="6" viewBox="0 0 36 6" fill="none">
+            <path d="M33 3.07324L3 3.07324" stroke="#AFAFAF" stroke-width="4.52746" stroke-linecap="round"/>
+            </svg>
+        </div>
+        </label>
+        <ul class="menu__box">
+            <div class="close-arrow" id="closeArrow" onclick="closesArrow()">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M15.5 6.00006L21.5 12.0001L15.5 18.0001" fill="none"/>
+                <path d="M21 12.0001H3" fill="none"/>
+            </svg>
+            
+            </div>
+        <li><a class="menu__item" id="start-game" href="#" onclick="loadAndPlayMusic('game1.txt')"><p>Начать игру</p></a></li>
+        <li><a class="menu__item" id="kolobuk-zelo" href="#" onclick="loadAndPlayMusic('game5.txt')"><p>Колобук зело</p></a></li>
+        <li><a class="menu__item" id="contacts-call" href="#"><p>обратная связь</p></a></li>
+        </ul>
+    </div>
+</div>
+<div class="feedback-sent">
+    <div class="left-feedback">
+        <div class="img-feed">
+            <img src="image\img-feedback.png" alt="img-feedback">
+        </div>
+    </div>
+    <div class="right-feedback">
+      <h1 class="sent-messege">Сообщение 
+        отправлено</h1>
+    
+    </div>
+</div>
+
+
+<div class="footer">
+    <div class="footer-link">
+        <a href="#" onclick="loadAndPlayMusic('game1.txt')">
+            <h4>Начать игру</h4>
+        </a>
+        <a href="#" onclick="loadContent('feedback.txt')">
+            <h4>Обратная связь</h4>
+        </a>
+        <a href="#" onclick="loadContent('user_agreement.txt')">
+            <h4>Пользовательское соглашение</h4>
+        </a>
+        <a href="#" onclick="loadContent('privacy_policy.txt')">
+            <h4>Политика конфиденциальности</h4>
+        </a>
+    </div> 
+    <div class="footer-line">
+        <img src="image\line.png" alt="">
+    </div> 
+    <div class="copywriter">
+        <p>
+            © Kolobuk.ru, 2024. Копирование материалов разрешено только с указанием активной ссылки на источник 
+        </p>
+    </div>  
+</div>
+
